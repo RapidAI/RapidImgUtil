@@ -1,7 +1,7 @@
 #include "precomp.h"
 
 
-QMIMGTYPE CRpImgRead::RpGetImgType(const BYTE* pImgBuf, uint32_t nBufLen)
+RPIMGTYPE CRpImgRead::RpGetImgType(const BYTE* pImgBuf, uint32_t nBufLen)
 {
 
     FIMEMORY* memory = FreeImage_OpenMemory((BYTE*)pImgBuf, nBufLen);
@@ -172,7 +172,7 @@ cv::Mat CRpImgRead::RpReadImg(const BYTE* pImgBuf, uint32_t nBufLen)
 {
 
     cv::Mat oriImg;
-    QMIMGTYPE Type = RpGetImgType(pImgBuf, nBufLen);
+    RPIMGTYPE Type = RpGetImgType(pImgBuf, nBufLen);
 
     switch (Type)
     {

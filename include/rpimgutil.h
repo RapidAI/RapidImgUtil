@@ -1,18 +1,18 @@
 #pragma once 
 #include "opencv2/imgproc.hpp"
 #include "FreeImage.h"
-typedef FREE_IMAGE_FORMAT QMIMGTYPE;
+typedef FREE_IMAGE_FORMAT RPIMGTYPE;
 
-typedef struct { uint32_t magic; QMIMGTYPE Type; } QM_IMG_MAP;
+typedef struct { uint32_t magic; RPIMGTYPE Type; } RP_IMG_MAP;
 
-extern QM_IMG_MAP QMIMGMAPTABLE[];
+extern RP_IMG_MAP QMIMGMAPTABLE[];
 class CRpImgRead
 {
 
 public:
 
 	static cv::Mat		RpReadImg(const BYTE* pImgBuf, uint32_t nBufLen);
-	static QMIMGTYPE	RpGetImgType(const BYTE* pImgBuf, uint32_t nBufLen);
+	static RPIMGTYPE	RpGetImgType(const BYTE* pImgBuf, uint32_t nBufLen);
 	static  bool		RpGetImgSize(const BYTE* pImgBuf, uint32_t nBufLen, int& nWidth, int& nHeight);
 
 	static cv::Mat  RpRotateImg(cv::Mat& src, double angle = 45.0);
