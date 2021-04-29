@@ -1,6 +1,6 @@
 An image processing library to add some new formats and other supports.
 
-support gif,webp, tiff, tar and others.
+To support gif,webp, tiff, tar and other formats.
 
 This library relies on  opencv & freeimage.
 
