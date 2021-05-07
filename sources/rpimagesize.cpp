@@ -294,7 +294,8 @@ static struct gfxinfo *rpimg_handle_jpeg (RPMIMG_STREAM* stream)
 		result->height = h;
 	}
 
-	result->channels = 0;
+	if(result)
+		result->channels = 0;
 
 	
 	return result; /* perhaps image broken -> no info but size */
